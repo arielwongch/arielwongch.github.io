@@ -14,7 +14,7 @@
     --yellow-400: #ffda4b;
     --yellow-800: #8b6f00;
     --blue: #0a61ae;
-    --blue-100: #bcd0d6;
+    --blue-100: #92b8c5;
     --blue-400: #61dafb;
     --blue-800: #0a61ae;
     --white: #d6d6d6;
@@ -30,7 +30,7 @@ body{
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
-    padding-bottom: 1000px;
+    padding-bottom: 0px;
     background-color: var(--black-800);
 }
 
@@ -251,7 +251,7 @@ h1{
                 background-position: center;
             }
             &:nth-child(1){
-                filter: hue-rotate(180deg);
+                filter: hue-rotate(130deg);
             }
             &:nth-child(2){
                 filter: hue-rotate(20deg);
@@ -269,6 +269,18 @@ h1{
 
         .social-links{
             a{
+                i{
+                    font-size: 50px;
+                    color: var(--black-100);
+                    transition: 0.5s;
+                    padding-right: 10px;
+
+
+                    &:hover{
+                        color:var(--base-400);
+                        transform: translateY(-5px);
+                    }
+                }
                 &:hover{
                     text-decoration: none;
                 }
@@ -325,8 +337,8 @@ h1{
     100%{
         transform: translateX(-50%);
     }
-    
 }
+
 
 h2{
     font-size: 64px;
