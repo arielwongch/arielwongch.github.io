@@ -5,8 +5,8 @@
 }
 
 :root{
-    --base: #555;
-    --base-100: #bcbbbb;
+    --base: #e0e0e0;
+    --base-100: #686868;
     --base-400:#555;
     --base-800: #000;
     --yellow: #ffda4b;
@@ -17,6 +17,12 @@
     --blue-100: #bcd0d6;
     --blue-400: #61dafb;
     --blue-800: #0a61ae;
+    --white: #d6d6d6;
+    --white-100: #bbbbbb;
+    --black: #000;
+    --black-100: #1e1e1e;
+    --black-800: #0c0c0c;
+    --betteryellow: #ffd11a;
 }
 
 body{
@@ -25,11 +31,12 @@ body{
     font-style: normal;
     font-size: 20px;
     padding-bottom: 1000px;
+    background-color: var(--black-800);
 }
 
 a {
 	text-decoration: none;
-	color: var(--blue);
+	color: var(--white);
 	&:hover {
 		text-decoration: underline;
 	}
@@ -49,23 +56,27 @@ header{
         padding:10px;
         align-items: center;
         font-weight: 600;
-        color: var(--base-800);
+        color: var(--white);
 
         .logo{
             display:flex;
             align-items: center;
             justify-content: center;
             font-size: 32px;
-            background-color: var(--base-800);
-            color: var(--base-100);
+            background-color: var(--white);
+            color: black;
             height:64px;
             width:64px;
             margin-right: 20px;
             border-radius: 50%;
+            img{
+                width:100%;
+                height:100%;
+                border-radius: 50%;
+            }
         }
         .logo-text{
             flex:1;
-
         }
     }
 
@@ -84,15 +95,33 @@ header{
                     color:var(--base);
                     &:hover {
                         background-color: var(--base-100) ;
-                        border-radius: 10px;
+                        border-radius: 20px;
                         text-decoration: none;
+                    }
+                    
+                }
+                .button{
+                    background-color: transparent;
+                    border: 3px solid #2851F6;
+                    border-radius: 20px;
+                    color: var(--base);
+                    background-image: url(https://web.archive.org/web/20160312084140im_/http://splatoon.nintendo.com/assets/img/nav-bg-fill-blue.png?1443460871);
+                    background-repeat: repeat-x;
+                    background-position: 0-100%;
+                    transition: 1.3s ease;
+                    &:hover {
+                        background-color: transparent;
+                        background-position: center;
+                    }
+                    &:nth-child(1){
+                        filter: hue-rotate(0deg);
                     }
                 }
             }
         }
         .mobile-toggle {
             display:none;
-            color: var(--base-800);
+            color: var(--base);
             padding:10px;
             @media(max-width: 768px){
                 display:inline-block;
@@ -162,6 +191,7 @@ section{
             background-color: var(--base-100);
             color: var(--blue-800);
         }
+        
     }
     &.white{
         background-color: black;
@@ -205,6 +235,26 @@ h1{
         span{
             @media(max-width:1024px){
                 display:none;
+            }
+        }
+        .button{
+            background-color: transparent;
+            border: 3px solid #2851F6;
+            border-radius: 20px;
+            color: var(--base-100);
+            background-image: url(https://web.archive.org/web/20160312084140im_/http://splatoon.nintendo.com/assets/img/nav-bg-fill-blue.png?1443460871);
+            background-repeat: repeat-x;
+            background-position: 0-100%;
+            transition: 1.3s ease;
+            &:hover {
+                background-color: transparent;
+                background-position: center;
+            }
+            &:nth-child(1){
+                filter: hue-rotate(180deg);
+            }
+            &:nth-child(2){
+                filter: hue-rotate(20deg);
             }
         }
 
@@ -436,7 +486,7 @@ h3{
                 left:0;
                 height:100%;
                 object-fit:cover;
-                transition: ease 3s all;
+                transition: ease 0.5s all;
             }
 
             &:hover{
