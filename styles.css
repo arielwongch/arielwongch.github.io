@@ -17,11 +17,11 @@
     --blue-100: #92b8c5;
     --blue-400: #61dafb;
     --blue-800: #0a61ae;
-    --white: #d6d6d6;
+    --white: #e7e7e7;
     --white-100: #bbbbbb;
     --black: #000;
     --black-100: #1e1e1e;
-    --black-800: #0c0c0c;
+    --black-800: #051325;
     --betteryellow: #ffd11a;
 }
 
@@ -44,7 +44,9 @@ a {
 
 header{
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     display: flex;
     justify-content: space-between;
     max-width: 1440px;
@@ -224,6 +226,7 @@ h1{
     font-size: 64px;
     line-height: 1;
     margin-bottom: 10px;
+    color: var(--white);
     small{
         display:block;
         font-weight: 100;
@@ -236,29 +239,33 @@ h1{
 
 .hero{
     display:flex;
+    padding-top: 30px;
+
     @media(max-width:1024px){
         flex-direction: column;
     }
 
     .hero-blue{
-        flex:1;
-        background-color: var(--blue-100);
+        flex:2;
+        background-color: var(--black-800);
         border-radius: 30px;
         padding:30px;
         display:flex;
         flex-direction: column;
         justify-content: center;
+        color: var(--white);
 
         span{
             @media(max-width:1024px){
                 display:none;
             }
         }
+
         .button{
             background-color: transparent;
             border: 3px solid #2851F6;
             border-radius: 20px;
-            color: var(--base-100);
+            color: var(--white);
             background-image: url(https://web.archive.org/web/20160312084140im_/http://splatoon.nintendo.com/assets/img/nav-bg-fill-blue.png?1443460871);
             background-repeat: repeat-x;
             background-position: 0-100%;
@@ -288,13 +295,13 @@ h1{
             a{
                 i{
                     font-size: 50px;
-                    color: var(--black-100);
+                    color: var(--white);
                     transition: 0.5s;
                     padding-right: 10px;
 
 
                     &:hover{
-                        color:var(--base-400);
+                        color:var(--white-100);
                         transform: translateY(-5px);
                     }
                 }
@@ -304,11 +311,13 @@ h1{
             }
         }
     }
+
     .hero-yellow{
         flex:1;
-        background-color: var(--base-100);
+        background-color: var(--black-800);
         border-radius: 30px;
         padding:0px 30px;
+        padding-bottom: 40px;
         display:flex;
         justify-content: center;
         align-items: flex-end;
@@ -321,7 +330,7 @@ h1{
 }
 
 .logos{
-    background-color: var(--base-100);
+    background-color: var(--black-800);
     border-radius: 30px;
     padding: 30px 0px;
 
@@ -343,6 +352,7 @@ h1{
             animation: marquee 40s linear infinite;
             display:flex;
             gap:10px;
+            align-items: center;
         }
     }
 }
@@ -378,9 +388,9 @@ h2{
 h3{
     font-size: 32px;
     font-weight: 600;
+    color: var(--black-800);
     line-height: 1;
     margin-bottom: 20px;
-    color: var(--base-800);
 }
 
 .skills{
@@ -402,6 +412,7 @@ h3{
                 margin-right: 100px;
                 margin-bottom: 20px;
                 li{
+                    
                     display:inline-block;
                     background-color: var(--blue-400);
                     padding:10px 20px;
@@ -434,11 +445,12 @@ h3{
             h3{
                 margin-top: 20px;
                 margin-bottom: 10px;
+                color: var(--black-800);
             }
             div{
                 font-weight: 600;
                 margin-bottom: 5px;
-                color:var(--base-800);
+                color:var(--black-800);
             }
             p{
                 margin-bottom: 10px;
@@ -596,6 +608,79 @@ h3{
         .chat-info{
             flex:3;
             padding-right: 30px;
+
+            /* .button{
+                color: var(--white);
+                background-color: var(--black-800);
+                transition: background 0.3s;
+            } */
+            .button {
+                scale: 1;
+                --width: 200px;
+                --height: 50px;
+                padding-top: 0px;
+                width: var(--width);
+                height: var(--height);
+                background: var(--black-800);
+                position: relative;
+                text-align: center;
+                border-radius: 10px;
+                font-size: 20px;
+                cursor: pointer;
+                text-decoration: none;
+                display: block;
+                transition: background 0.3s;
+            }
+
+            .button .text {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                line-height: 1;
+            }
+
+            .button .button-wrapper,
+            .button .text,
+            .button .icon {
+                overflow: hidden;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                color: var(--white);
+            }
+
+            .button .text {
+                top: 0;
+            }
+
+            .button .text,
+            .button .icon {
+                transition: top 0.5s;
+            }
+
+            .button .icon {
+                color: var(--white);
+                top: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+            }
+
+            .button:hover {
+                background: blue;
+            }
+
+            .button:hover .text {
+                top: -100%;
+            }
+
+            .button:hover .icon {
+                top: 0;
+            }
+        
         }
         .chat-box{
             flex:4;
