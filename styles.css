@@ -21,8 +21,9 @@
     --white-100: #bbbbbb;
     --black: #000;
     --black-100: #1e1e1e;
-    --black-800: #051325;
+    --black-800: #040b15;
     --betteryellow: #ffd11a;
+    --darkerblack-800:#11161e;
 }
 
 body{
@@ -44,7 +45,7 @@ a {
 
 header{
     padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     padding-left: 20px;
     padding-right: 20px;
     display: flex;
@@ -259,7 +260,7 @@ h1{
 
 .hero{
     display:flex;
-    padding-top: 30px;
+    padding-top: 0px;
     height:100%;
 
     @media(max-width:1024px){
@@ -268,9 +269,7 @@ h1{
 
     .hero-blue{
         flex:2;
-        background-color: transparent;
-        border-radius: 30px;
-        padding:30px;
+        padding-left:30px;
         display:flex;
         flex-direction: column;
         justify-content: center;
@@ -295,7 +294,6 @@ h1{
             z-index: 1;
             overflow: hidden;
             transition: 0.5s;
-            border-radius: 10px;
 
             &:hover::before{
                 width:100%;
@@ -353,7 +351,7 @@ h1{
         background-color: var(--black-800);
         border-radius: 30px;
         padding:0px 30px;
-        padding-bottom: 40px;
+        padding-bottom: 50px;
         
         display:flex;
         justify-content: center;
@@ -361,7 +359,7 @@ h1{
 
         mask-image: linear-gradient(var(--black-800), transparent);
         img{
-            margin-top: 30px;
+            margin-top: 0px;
             max-width:420px;
             margin-bottom: -10px;
         }
@@ -480,6 +478,7 @@ h3{
                     margin-bottom: 10px;
                 }
             }
+            
         }
         .right-column{
             flex:1;
@@ -492,35 +491,37 @@ h3{
 
 .work-experience{
     .jobs{
-        display:flex;
+        display:flex; 
         gap:30px;
         @media(max-width:1024px){
             flex-direction: column;
         }
-        article{
-            background-color: var(--yellow-100);
+        .jobs-card{
+            background-color: var(--darkerblack-800);
             padding:30px;
-            border-radius: 30px;
+            
+            border-radius: 10px;
             flex:1;
             h3{
                 margin-top: 20px;
                 margin-bottom: 10px;
-                color: var(--black-800);
+                color: var(--white);
             }
             div{
                 font-weight: 600;
                 margin-bottom: 5px;
-                color:var(--black-800);
+                color:var(--white);
             }
             p{
                 margin-bottom: 10px;
+                color:var(--white);
             }
             figure{
                 width:100%;
                 padding-top: 56.25%;
                 overflow: hidden;
                 position: relative;
-                border-radius: 15px;
+                border-radius: 5px;
 
                 img{
                     position:absolute;
@@ -552,6 +553,8 @@ h3{
                 }
             }
         }
+
+        
     }
 }
 
