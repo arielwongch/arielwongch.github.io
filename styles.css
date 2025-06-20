@@ -459,8 +459,8 @@ h2{
             }
             .left-upper-column{
                 flex:1;
-                
-                padding-right: 50px;
+                padding-left: 25px;
+                padding-right: 25px;
 
                 .skill-box{
                     width:100%;
@@ -519,8 +519,8 @@ h2{
             }
             .left-lower-column{
                 flex:1;
-
-                padding-right: 50px;
+                padding-left: 25px;
+                padding-right: 25px;
 
                 .skill-box{
                     width:100%;
