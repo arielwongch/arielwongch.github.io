@@ -466,8 +466,6 @@ h2{
         border-radius: 30px;
         padding:30px;
 
-        
-        
         .left-column{
             display:flex;
             color:var(--white);
@@ -492,6 +490,9 @@ h2{
                         gap:5px;
                         padding-bottom: 5px;
                         font-size: 25px;
+                        i{
+                            width:25px;
+                        }
                     }
 
                     .skill-bar{
@@ -554,6 +555,9 @@ h2{
                         gap:5px;
                         padding-bottom: 5px;
                         font-size: 25px;
+                        i{
+                            width:25px;
+                        }
                     }
                     .skill-bar{
                         position: relative;
@@ -1138,8 +1142,6 @@ hr{
                 border-radius: 8px;
                 flex:1;
                 padding: 40px;
-
-                
             }
             .contact-inputs{
                 width:400px;
